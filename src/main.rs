@@ -2,9 +2,7 @@ use std::collections::HashMap;
 
 use lambda_http::{http::StatusCode, run, service_fn, Body, Error, Request, Response};
 
-/// Write your code inside it.
-/// There are some code example in the following URLs:
-/// - https://github.com/awslabs/aws-lambda-rust-runtime/tree/main/examples
+/// Main Lambda Event Handler - Gets Request, and returns redirect.
 async fn function_handler(event: Request) -> Result<Response<Body>, Error> {
     // For now a Hashmap with the path and the url to redirect too.
     // TODO: Create a json or yaml or something file that is statically embedded at compile time
@@ -14,7 +12,8 @@ async fn function_handler(event: Request) -> Result<Response<Body>, Error> {
     let url_lookup = HashMap::from([
         ("zoom","https://us05web.zoom.us/j/83526723885?pwd=TUtWL2wyTnBoMitFa2RuYnRicUZhQT09"),
         ("discord","https://discord.com/invite/kqhzghtcds"),
-        ("recordings","https://tokyo-python.notion.site/Tokyo-Python-Recordings-d45b4e6484164ca7aae02c7142d4d92f")
+        ("recordings","https://tokyo-python.notion.site/Tokyo-Python-Recordings-d45b4e6484164ca7aae02c7142d4d92f"),
+        ("intro","https://www.notion.so/tokyo-python/Tokyo-Python-Intro-faf0af53bf584037812549684f7a8739")
 
     ]);
 
