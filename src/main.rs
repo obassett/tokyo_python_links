@@ -10,7 +10,8 @@ async fn function_handler(event: Request) -> Result<Response<Body>, Error> {
     // require a proper external data source
 
     let url_lookup = HashMap::from([
-        ("zoom","https://us05web.zoom.us/j/83526723885?pwd=TUtWL2wyTnBoMitFa2RuYnRicUZhQT09"),
+        // ("zoom","https://us05web.zoom.us/j/83526723885?pwd=TUtWL2wyTnBoMitFa2RuYnRicUZhQT09"),
+        ("zoom","https://us06web.zoom.us/j/83444621862?pwd=Wnp5L01pbVg0WVNhOTlyc0Fqa2pZUT09"),
         ("discord","https://discord.com/invite/kqhzghtcds"),
         ("recordings","https://tokyo-python.notion.site/Tokyo-Python-Recordings-d45b4e6484164ca7aae02c7142d4d92f"),
         ("intro","https://www.notion.so/tokyo-python/Tokyo-Python-Intro-faf0af53bf584037812549684f7a8739")
